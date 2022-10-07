@@ -5,12 +5,12 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import auth from './services/authService';
 import NavBar from './components/navBar';
-import Welcome from './components/welcome';
 import PasswordRecov from './components/passwordRecov';
 import NotFound from './components/notFound';
 import Register from './components/register';
-import Feed from './components/feed';
 import LandingPage from './components/landingPage';
+import Search from './components/search';
+import Profile from './components/profile';
 
 class App extends React.Component {
   state = {}; // Is this necessary?
@@ -30,6 +30,8 @@ class App extends React.Component {
           <Route path='/passwordRecovery' element={<PasswordRecov />} />
           <Route path='/register' element={<Register />} />
           <Route path='*' element={<NotFound />} />
+          <Route path='/search' element={<Search />}/>
+          <Route path='/profile' element={<Profile />}/>
         </Routes>
       </React.Fragment>
     );
