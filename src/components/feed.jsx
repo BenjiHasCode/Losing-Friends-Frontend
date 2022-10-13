@@ -180,7 +180,7 @@ class Feed extends React.Component {
                 <div className='feed'>
                     <PostCreator onClick={() => this.handleClick()}/>
                     <div>
-                        <ul>{feedItems}</ul>
+                        <ol>{feedItems}</ol>
                         <RecipeReviewCard />
                         <RecipeReviewCard />
                         <RecipeReviewCard />
@@ -191,13 +191,26 @@ class Feed extends React.Component {
     }
 
     handleClick() {
-        const posts = this.state.feedItems.slice();
+        const posts = this.state.feedItems.slice(); // Todo sort based on time
         const name = "Testo";
-        const date = "October 13, 2022";
+        const date = Date.now();
         const content = document.getElementById('post-input').value;
 
         posts.push({name, date, content}); //temp todo fix
+        posts.sort(this.compare).reverse();
+
         this.setState({feedItems: posts});
+    }
+
+
+    compare( a, b ) {
+        if ( a.date  < b.date ){
+          return -1;
+        }
+        if ( a.date > b.date ){
+          return 1;
+        }
+        return 0;
     }
 }
 
