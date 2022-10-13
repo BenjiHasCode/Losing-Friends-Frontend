@@ -1,0 +1,32 @@
+.feed {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post {
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.358));
+    background-color: white;
+    border-radius: 10px;
+}
+
+.poster {
+    margin: auto;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.post-button {
+    background-color: springgreen;
+    border-radius: 10px;
+    filter: drop-shadow(0px, 0px, 10px rgba(0, 0, 0, 0.358));
+}
+
+body {
+    background-color: rgb(244, 244, 244);
+}

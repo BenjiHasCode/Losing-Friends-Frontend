@@ -1,10 +1,9 @@
 import React from "react";
-import { AppBar, Box, Toolbar } from "@mui/material";
-import IconButton from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
-import { green } from "@mui/material/colors";   // TODO reimplement a400 later
+import { green } from "@mui/material/colors";
 import Search from "./search";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
